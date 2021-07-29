@@ -11,7 +11,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    let data = JSON.parse(fs.readFileSync('./Coins.json',"utf-8"))
+    let data = JSON.parse(fs.readFileSync('../Coins.json',"utf-8"))
     return queryInterface.bulkInsert('Coins', data)
     
   },
