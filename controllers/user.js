@@ -36,10 +36,10 @@ class UserController{
         if(comparer(password,dbPassword)){
           res.status(200).json({access_token: generateToken(result.id), username: result.username})
         }else {
-          res.status(400).json({error: `wrong email/password`})
+          res.status(401).json({error: `wrong email/password`})
         }
       })
-      .catch(err=> res.status(400).json({error: `wrong email/password`}))
+      .catch(err=> res.status(401).json({error: `wrong email/password`}))
   }
 }
 
